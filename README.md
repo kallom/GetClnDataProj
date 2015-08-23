@@ -3,10 +3,9 @@
 
 This repository contains: 
 
-1) a tidy data set as per specifications (tidy_dataset.txt), 
-2) the script for performing the analysis (run_analysis.R), and 
-3) a code book that describes the variables, the data, and any transformations
-or work that I performed to clean up the data called CodeBook.md. 
+	1. a tidy data set as per specifications (tidy_dataset.txt), 
+	2. the script for performing the analysis (run_analysis.R), and 
+	3. a code book that describes the variables, the data, and any transformations that I performed to clean up the data called CodeBook.md. 
 
 The R script called run_analysis.R that does the following. 
 
@@ -18,7 +17,7 @@ The R script called run_analysis.R that does the following.
     5. From the data set in step 4, creates a second, independent tidy data 
 	   set with the average of each variable for each activity and each subject.
 
-The script checks if there's a data subdirectory in the working directory and 
+The script checks if there's a subdirectory called "data" in the working directory and 
 creates it if there isn't. At the first run it will download the dataset and 
 unzip it to the data subdirectiry. At each step the script will check whether the 
 downloaded ZIP file and the directory 'UCI HAR Dataset' exist. If they do it skips
@@ -34,7 +33,7 @@ joined (test first).
 
 The same steps are done with the subject and activity files (except the subsetting, 
 which is not needed since these files only contain 1 column of data).
-Then the three resulting rowbound data frames are merged column-wise and this data 
+Then the three resulting row-bound data frames are merged column-wise and this data 
 frame is merged with the activity label data read from the activity_labels.txt file
 to create a column which contains activity names instead of numerical activity codes.
 

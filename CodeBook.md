@@ -11,10 +11,10 @@ explains the transformation done with it and the structure of the result dataset
 
 The source files in the zip file are:
 * activity_labels.txt: contains the codes used to label the activities and their respective names (strings)
-* 6 files in two directories (test and train):
-** subject_test.txt, subject_train.txt: these contain the code of the test subject for each observation 
-** X_test.txt, X_train.txt: these contain the measurement data (561 measurements for each observation)
-** y_test.txt, y_train.txt: these contain the activity code for each observation 
+6 files in two directories (test and train):
+* subject_test.txt, subject_train.txt: these contain the code of the test subject for each observation 
+* X_test.txt, X_train.txt: these contain the measurement data (561 measurements for each observation)
+* y_test.txt, y_train.txt: these contain the activity code for each observation 
 
 According to the project specifications the following steps were used to create the tidy dataset:
 
