@@ -125,11 +125,11 @@ text file where the delimiter is the sapce (the " " character), the text qualifi
 and the decimal separator is the period (the "." character). The first line contains the column headers.
 
 It contains the following columns:
-¡¡¡
+```
 Column Name	Description
 Activity       The name of the activity performed when the measurement happened
 Subject        The numeric code of the test subject 
-¡¡¡
+```
 
 Subsequent column names follow the conventions below:
 * All values are numerical values, averages of the respectively named measurements grouped by activity and test subject
