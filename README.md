@@ -3,9 +3,9 @@
 
 This repository contains: 
 
-	1. a tidy data set as per specifications (*tidy_dataset.txt*), 
-	2. the script for performing the analysis (*run_analysis.R*), and 
-	3. a code book that describes the variables, the data, and any transformations that I performed to clean up the data called *CodeBook.md*. 
+- a tidy data set as per specifications (*tidy_dataset.txt*), 
+- the script for performing the analysis (*run_analysis.R*), and 
+- a code book that describes the variables, the data, and any transformations that I performed to clean up the data called *CodeBook.md*. 
 
 The R script called *run_analysis.R* that does the following. 
 

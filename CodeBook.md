@@ -27,7 +27,7 @@ convention with the following modifications:
 * I removed the parentheses or "()"
 * I replaced hyphens ("-" characters) with underscores (the "_" character). 
 
-...
+¡¡¡
 Col #  Column Name
 1	tBodyAcc_mean_X
 2	tBodyAcc_mean_Y
@@ -108,7 +108,7 @@ Col #  Column Name
 542	fBodyBodyGyroJerkMag_mean
 543	fBodyBodyGyroJerkMag_std
 552	fBodyBodyGyroJerkMag_meanFreq
-...
+¡¡¡
 
 I loaded the X_*.txt observation files and removed the unnecessary columns from the data sets then
 joined the two data sets so that the first observations come from the test files, the subsequent 
@@ -125,11 +125,11 @@ text file where the delimiter is the sapce (the " " character), the text qualifi
 and the decimal separator is the period (the "." character). The first line contains the column headers.
 
 It contains the following columns:
-...
+¡¡¡
 Column Name	Description
 Activity       The name of the activity performed when the measurement happened
 Subject        The numeric code of the test subject 
-...
+¡¡¡
 
 Subsequent column names follow the conventions below:
 * All values are numerical values, averages of the respectively named measurements grouped by activity and test subject
@@ -142,7 +142,7 @@ Subsequent column names follow the conventions below:
 * fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag are the results of a Fast Fourier Transform (FFT) of the respective signals
 For further explanation refer to the features.txt file in the source data.
 
-...
+¡¡¡
 Column Name	
 tBodyAcc_mean_X	 
 tBodyAcc_mean_Y	 
@@ -223,4 +223,4 @@ fBodyBodyGyroMag_meanFreq
 fBodyBodyGyroJerkMag_mean	 
 fBodyBodyGyroJerkMag_std	 
 fBodyBodyGyroJerkMag_meanFreq	 
-...
+¡¡¡
