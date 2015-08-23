@@ -110,7 +110,7 @@ Column# Column Name
 552 fBodyBodyGyroJerkMag-meanFreq()
 ```
 
-I loaded the _X_*.txt_ observation files and removed the unnecessary columns from the data sets then
+I loaded the X_*.txt observation files and removed the unnecessary columns from the data sets then
 joined the two data sets so that the first observations come from the test files, the subsequent 
 observations from the train data set. I then joined the subject and activity data sets using the 
 same method (these two only ocntain one column for each observation). Then I merged the three data 
