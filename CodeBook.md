@@ -27,6 +27,7 @@ convention with the following modifications:
 * I removed the parentheses or "()"
 * I replaced hyphens ("-" characters) with underscores (the "_" character). 
 
+```
 Column# Column Name
 1   tBodyAcc-mean()-X
 2   tBodyAcc-mean()-Y
@@ -107,7 +108,7 @@ Column# Column Name
 542 fBodyBodyGyroJerkMag-mean()
 543 fBodyBodyGyroJerkMag-std()
 552 fBodyBodyGyroJerkMag-meanFreq()
- 
+```
 
 I loaded the X_*.txt observation files and removed the unnecessary columns from the data sets then
 joined the two data sets so that the first observations come from the test files, the subsequent 
