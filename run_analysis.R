@@ -6,7 +6,7 @@ mainProj2 <- function() {
     
     message("Working directory: ", getwd())
     # Downloads and unzips the data to the data subdirectory in the working directory
-    message("Checking if the download is required...")
+    message("Checking if download is required...")
     setInternet2(use = TRUE)
     fUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
     # Create data subdir if it doesn't exist
@@ -69,63 +69,63 @@ mainProj2 <- function() {
     
     
     message("Reading test X data file...")
-    df1 <<- read.table("./UCI HAR Dataset/test/X_test.txt")
-    df1 <<- df1[,ColumnSubsetVector]
+    df1 <- read.table("./UCI HAR Dataset/test/X_test.txt")
+    df1 <- df1[,ColumnSubsetVector]
     message("Reading done. # of NAs = ", sum(is.na(df1)))
     message("Reading train X data file...")
-    df2 <<- read.table("./UCI HAR Dataset/train/X_train.txt")
-    df2 <<- df2[,ColumnSubsetVector]
+    df2 <- read.table("./UCI HAR Dataset/train/X_train.txt")
+    df2 <- df2[,ColumnSubsetVector]
     message("Reading done. # of NAs = ", sum(is.na(df2)))
     
     # Joining the main test and train data
     message("Joining data frames...")
-    df.main <<- rbind(df1, df2)
+    df.main <- rbind(df1, df2)
     # Set up meaningful column name(s)
-    names(df.main) <<- ColumnNamesVector
+    names(df.main) <- ColumnNamesVector
     
     
     # read and join the subject files
     message("Reading subject data files...")
-    df1 <<- read.table("./UCI HAR Dataset/test/subject_test.txt")
+    df1 <- read.table("./UCI HAR Dataset/test/subject_test.txt")
     message("Reading done. # of NAs = ", sum(is.na(df1)))
-    df2 <<- read.table("./UCI HAR Dataset/train/subject_train.txt")
+    df2 <- read.table("./UCI HAR Dataset/train/subject_train.txt")
     message("Reading done. # of NAs = ", sum(is.na(df2)))
     # Joining test and train data
-    df.subj <<- rbind(df1, df2)
+    df.subj <- rbind(df1, df2)
     # Set up meaningful column name(s)
-    names(df.subj) <<- c("Subject")
+    names(df.subj) <- c("Subject")
     
     # read and join the activity label files
     message("Reading activity label data files...")
-    df1 <<- read.table("./UCI HAR Dataset/test/y_test.txt")
+    df1 <- read.table("./UCI HAR Dataset/test/y_test.txt")
     message("Reading done. # of NAs = ", sum(is.na(df1)))
-    df2 <<- read.table("./UCI HAR Dataset/train/y_train.txt")
+    df2 <- read.table("./UCI HAR Dataset/train/y_train.txt")
     message("Reading done. # of NAs = ", sum(is.na(df2)))
     
     # Joining test and train data
-    df.activity <<- rbind(df1, df2)
+    df.activity <- rbind(df1, df2)
     # Set up meaningful column name(s)
-    names(df.activity) <<- c("ActivityLbl")
+    names(df.activity) <- c("ActivityLbl")
     
     # Remove the original data frames
     rm(df1, df2)
     
     # Merging the three data frames
-    df.full <<- cbind(df.subj, df.main, df.activity)
+    df.full <- cbind(df.subj, df.main, df.activity)
     
     # read the activity string file
     message("Reading activity names...")
-    df.labels <<- read.table("./UCI HAR Dataset/activity_labels.txt")
-    names(df.labels) <<- c("ActivityLbl", "Activity")
+    df.labels <- read.table("./UCI HAR Dataset/activity_labels.txt")
+    names(df.labels) <- c("ActivityLbl", "Activity")
     
     # Merge the data with the activity names to get descriptive activity names
-    df.full <<- merge(df.full, df.labels, by = "ActivityLbl") 
+    df.full <- merge(df.full, df.labels, by = "ActivityLbl") 
     
     library(dplyr)
     # Group results by activity and subject
-    df.full <<- group_by(df.full,Activity, Subject)
+    df.full <- group_by(df.full,Activity, Subject)
     # Summarise the data to get the average for each measurement
-    df.full <<- summarise(df.full,
+    df.full <- summarise(df.full,
                           tBodyAcc_mean_X=mean(tBodyAcc_mean_X),tBodyAcc_mean_Y=mean(tBodyAcc_mean_Y),
                           tBodyAcc_mean_Z=mean(tBodyAcc_mean_Z),tBodyAcc_std_X=mean(tBodyAcc_std_X),
                           tBodyAcc_std_Y=mean(tBodyAcc_std_Y),tBodyAcc_std_Z=mean(tBodyAcc_std_Z),
