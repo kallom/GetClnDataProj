@@ -3,11 +3,11 @@
 
 This repository contains: 
 
-	1. a tidy data set as per specifications (tidy_dataset.txt), 
-	2. the script for performing the analysis (run_analysis.R), and 
-	3. a code book that describes the variables, the data, and any transformations that I performed to clean up the data called CodeBook.md. 
+	1. a tidy data set as per specifications (*tidy_dataset.txt*), 
+	2. the script for performing the analysis (*run_analysis.R*), and 
+	3. a code book that describes the variables, the data, and any transformations that I performed to clean up the data called *CodeBook.md*. 
 
-The R script called run_analysis.R that does the following. 
+The R script called *run_analysis.R* that does the following. 
 
     1. Merges the training and the test sets to create one data set.
     2. Extracts only the measurements on the mean and standard deviation for 
@@ -17,7 +17,7 @@ The R script called run_analysis.R that does the following.
     5. From the data set in step 4, creates a second, independent tidy data 
 	   set with the average of each variable for each activity and each subject.
 
-The script checks if there's a subdirectory called "data" in the working directory and 
+The script checks if there's a subdirectory called *"data"* in the working directory and 
 creates it if there isn't. At the first run it will download the dataset and 
 unzip it to the data subdirectiry. At each step the script will check whether the 
 downloaded ZIP file and the directory 'UCI HAR Dataset' exist. If they do it skips
