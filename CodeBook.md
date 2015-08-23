@@ -5,16 +5,16 @@ The source data for this project can be obtained from the link below:
 
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
-The README.txt, features.txt and features_info.txt files contained in the downloadable 
+The _README.txt_, _features.txt_ and _features_info.txt_ files contained in the downloadable 
 zip file contain all the information regarding the origins of the data. This code book 
 explains the transformation done with it and the structure of the result dataset.
 
 The source files in the zip file are:
-* activity_labels.txt: contains the codes used to label the activities and their respective names (strings)
+* _activity_labels.txt_: contains the codes used to label the activities and their respective names (strings)
 6 files in two directories (test and train):
-* subject_test.txt, subject_train.txt: these contain the code of the test subject for each observation 
-* X_test.txt, X_train.txt: these contain the measurement data (561 measurements for each observation)
-* y_test.txt, y_train.txt: these contain the activity code for each observation 
+* _subject_test.txt, subject_train.txt_: these contain the code of the test subject for each observation 
+* _X_test.txt, X_train.txt_: these contain the measurement data (561 measurements for each observation)
+* _y_test.txt, y_train.txt_: these contain the activity code for each observation 
 
 According to the project specifications the following steps were used to create the tidy dataset:
 
@@ -22,7 +22,7 @@ Out of the 561 measurements I have selected 79 measurements (or columns in data 
 that contains either the mean or the standard deviation of a measured variable. I did not exclude 
 the MeanFreq variables because these meet the criteria according to my interpretation.
 
-This table contains the 79 selected column number and name based on the features.txt naming 
+This table contains the 79 selected column number and name based on the _features.txt_ naming 
 convention with the following modifications:
 * I removed the parentheses or "()"
 * I replaced hyphens ("-" characters) with underscores (the "_" character). 
@@ -110,12 +110,12 @@ Column# Column Name
 552 fBodyBodyGyroJerkMag-meanFreq()
 ```
 
-I loaded the X_*.txt observation files and removed the unnecessary columns from the data sets then
+I loaded the _X_*.txt_ observation files and removed the unnecessary columns from the data sets then
 joined the two data sets so that the first observations come from the test files, the subsequent 
 observations from the train data set. I then joined the subject and activity data sets using the 
 same method (these two only ocntain one column for each observation). Then I merged the three data 
 sets and included the activity labels according to activity codes based on the code assignment 
-described in the activity_labels.txt file.
+described in the _activity_labels.txt_ file.
 
 The results were grouped by activity and subject, then I summarised the data to get the average 
 for each measurement. The final tidy data set was written to a text file.
@@ -140,9 +140,9 @@ Subsequent column names follow the conventions below:
 * tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ areJ erk signals (time derived body linear acceleration and angular velocity signals)
 * tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag are the magnitude of these three-dimensional signals, calculated using the Euclidean norm
 * fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag are the results of a Fast Fourier Transform (FFT) of the respective signals
-For further explanation refer to the features.txt file in the source data.
+For further explanation refer to the _features.txt_ file in the source data.
 
-
+```
 Column Name	
 tBodyAcc_mean_X	 
 tBodyAcc_mean_Y	 
@@ -223,4 +223,4 @@ fBodyBodyGyroMag_meanFreq
 fBodyBodyGyroJerkMag_mean	 
 fBodyBodyGyroJerkMag_std	 
 fBodyBodyGyroJerkMag_meanFreq	 
-
+```
